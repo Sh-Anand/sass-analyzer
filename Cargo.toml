@@ -8,3 +8,5 @@ name = "sass_analyzer"
 path = "src/sass/mod.rs"
 
 [dependencies]
+strum = "0.27"
+strum_macros = "0.27"

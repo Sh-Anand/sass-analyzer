@@ -1,4 +1,6 @@
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+use strum_macros::{Display, EnumString};
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Display, EnumString)]
 pub enum SassOpcode {
     // Memory Operations
     STARTMEM = 0,
@@ -144,6 +146,7 @@ pub enum SassOpcode {
     ENDMISC,
 }
 
+
 impl SassOpcode {
     /// Check if opcode falls in range (start, end) (excluding both markers)
     const fn in_range(&self, start: Self, end: Self) -> bool {
@@ -185,3 +188,4 @@ impl SassOpcode {
         self.in_range(Self::STARTMOV, Self::ENDMOV)
     }
 }
+
