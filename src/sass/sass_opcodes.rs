@@ -1,5 +1,4 @@
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
-#[repr(u16)]
 pub enum SassOpcode {
     // Memory Operations
     STARTMEM = 0,
