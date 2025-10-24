@@ -3,4 +3,8 @@ name = "sass-analyzer"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "sass_analyzer"
+path = "src/sass/mod.rs"
+
 [dependencies]
