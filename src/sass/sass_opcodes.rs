@@ -35,6 +35,7 @@ pub enum SassOpcode {
     // Integer ALU Operations
     IADD,
     IADD3,
+    UIADD3,
     IMAD,
     IMUL,
     IMNMX,
@@ -174,7 +175,7 @@ impl SassOpcode {
     
     pub const fn alu_ops() -> &'static [SassOpcode] {
         &[
-            Self::IADD, Self::IADD3, Self::IMAD, Self::IMUL,
+            Self::IADD, Self::IADD3, Self::UIADD3, Self::IMAD, Self::IMUL,
             Self::IMNMX, Self::ISETP, Self::ISET, Self::ICMP,
             Self::LOP3, Self::LEA, Self::SHF, Self::SHL, Self::SHR,
             Self::POPC, Self::FLO,
